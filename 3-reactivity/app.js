@@ -5,14 +5,16 @@ const app = Vue.createApp({
       name: "",
     };
   },
-  methods: {
-    outputFullName() {
+  computed: {
+    fullName() {
       if (this.name === "") {
         return "";
       }
 
       return this.name + " " + "The Great";
     },
+  },
+  methods: {
     setName(event) {
       this.name = event.target.value;
     },
